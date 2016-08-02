@@ -1,17 +1,21 @@
-module ReusableModule
+module Test
   def module_method
     puts "Module Method: Hi there!"
   end
 end
 
-class ClassThatIncludes
-  include ReusableModule
+class Includ
+  include Test
 end
-class ClassThatExtends
-  extend ReusableModule
+class Exte
+  extend Test
 end
 
 puts "Include"
-ClassThatIncludes.new.module_method 
+Includ.new.module_method
+# need to make new 
+
+
 puts "Extend"
-ClassThatExtends.module_method
+Exte.module_method
+# this one is easir to use
